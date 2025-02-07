@@ -3,7 +3,8 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 # Define a SECRET API KEY
-API_KEY = "EpLN&6zX"  # Change this to a strong, random key!
+import os
+API_KEY = os.getenv("API_KEY")
 
 @app.route('/')
 def home():
